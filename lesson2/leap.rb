@@ -6,19 +6,19 @@ month = gets.chomp.to_i
 print "Year (A.D) "
 year = gets.chomp.to_i
 
-count = day
+days = day
 i = 0
 
-days_month_count = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
 if year%4 == 0 && year%100 !=0 || year%400 == 0
-  days_month_count[1] = 29
+  months[1] = 29
 end
 
 while i < month - 1
-  count = count + days_month_count[i]
+  days = days + months[i]
   i = i + 1
-  puts count
+  puts days
 end
 
-puts "The index of this date is #{count}"
+puts "The index of this date is #{days}"
