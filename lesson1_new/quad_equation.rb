@@ -14,13 +14,13 @@ puts "Коэффициент c:"
 c = gets.chomp.to_f
 
 d = b**2 - 4*a*c
-d_root = Math.sqrt(d.abs)
 
 if d < 0
   puts "Корней нет!"
 elsif d == 0
   puts "Дискриминант равен #{d}. Корень равен 0!"
 else
+  d_root = Math.sqrt(d.abs)
   x1 = +(-b + d_root) / 2*a
   x2 = +(-b - d_root) / 2*a
   puts "Дискриминант равен #{d}, корень X1 равен #{x1}, корень X2 равен #{x2}"
