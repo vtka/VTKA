@@ -9,7 +9,7 @@ i =10
 
 while i <= 100 do 
   a << i
-  i = i+5
+  i += 5
 end
 
 print a
